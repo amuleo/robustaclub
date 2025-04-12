@@ -3,68 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robusta Club</title>
+    <title>روبوستا کلاب</title>
     <style>
         @font-face {
             font-family: 'Yekan';
-            src: url('yekan.woff') format('woff');
+            src: url('fonts/YekanBakh-Regular.ttf') format('truetype');
         }
-        
+
         body {
             margin: 0;
             padding: 0;
             font-family: 'Yekan', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #d5c4a1;
+            color: #5d4037;
+            direction: rtl;
             text-align: center;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             min-height: 100vh;
         }
 
         header {
-            background-color: #3e3e3e;
-            color: #fff;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-        }
-
-        main {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: #ff9800;
+            background-color: #3e2723;
             color: #fff;
             padding: 0.5rem 1rem;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 1rem;
+            font-size: 1rem;
+            position: sticky;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0.5rem;
+            height: 3.5rem;
         }
 
-        .cta-button:hover {
-            background-color: #e68a00;
+        header img {
+            width: 40px; /* عرض لوگو به اندازه تگ */
+            height: auto; /* ارتفاع لوگو وابسته به تصویر */
+            filter: invert(1); /* تبدیل رنگ‌ها به معکوس (سفید کردن لوگوی سیاه) */
+        }
+
+        .container {
+            flex-grow: 1;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column; /* چیدمان عمودی برای زیرهم قرارگیری باکس و دکمه */
+            align-items: center;
+        }
+
+        .box {
+            background-color: #f0ebe5;
+            border: none;
+            border-radius: 15px; /* گوشه‌های گردتر */
+            padding: 1.5rem;
+            width: 80%; /* عرض باکس ثابت */
+            max-width: 400px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            height: auto; /* ارتفاع داینامیک */
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #6d4c41;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px; /* گوشه‌های کاملاً گرد */
+            margin-top: 1rem;
+            width: 80%; /* هماهنگی عرض دکمه با عرض باکس */
+            max-width: 400px; /* محدودیت حداکثر عرض دکمه */
+        }
+
+        .button:hover {
+            background-color: #5d4037;
+        }
+
+        footer {
+            background-color: #3e2723;
+            color: #fff;
+            padding: 0.01rem 0;
+            font-size: 0.9rem;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>روبوسنا کلاب</h1>
+        <img src="pics/logo.png" alt="لوگوی سایت">
+        <h1>روبوستا کلاب</h1>
     </header>
-    <main>
-        <p>بزودی فعالیت سایتمون شروع میشه، فعالیت‌مون در زمینهٔ افزایش ساعت مطالعه با راهکارای تجربی و عملی!!</p>
-        <a href="https://ypt.app" class="cta-button">عضویت در اپلیکشن YPT</a>
-    </main>
+    <div class="container">
+        <div class="box">
+            <p>بزودی فعالیت سایتمون شروع میشه، قراره اینجا راجب افزایش ساعت مطالعه با روش‌های تجربی حرف بزنیم، راستی یادتون نره توی گروه روبوستا کلاب داخل اپلیکیشن YPT عضو بشید.</p>
+        </div>
+        <a href="https://ypt.app" class="button">عضویت در اپلیکیشن YPT</a>
+    </div>
     <footer>
-        <p>© 2025 روبوسنا کلاب</p>
+        <p>تمامی حقوق برای روبوستا کلاب محفوظ است</p>
     </footer>
 </body>
 </html>
