@@ -14,51 +14,57 @@
             margin: 0;
             padding: 0;
             font-family: 'Yekan', sans-serif;
-            background-color: #f9f6f2;
-            color: #3e3e3e;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
         }
 
         header {
             background-color: #3e3e3e;
-            color: #f9f6f2;
-            text-align: center;
-            padding: 1rem 0;
+            color: #fff;
+            padding: 1rem;
             position: sticky;
             top: 0;
         }
 
         main {
-            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             padding: 2rem;
         }
 
-        footer {
-            background-color: #3e3e3e;
-            color: #f9f6f2;
-            text-align: center;
-            padding: 1rem 0;
-        }
-
-        a {
-            color: #d19975;
+        .cta-button {
+            display: inline-block;
+            background-color: #ff9800;
+            color: #fff;
+            padding: 0.5rem 1rem;
             text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .cta-button:hover {
+            background-color: #e68a00;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>روبوستا کلاب</h1>
+        <h1>روبوسنا کلاب</h1>
     </header>
     <main>
-        <p>فعالیت‌های جذاب در حوزه مطالعه و فناوری</p>
-        <a href="#about">درباره ما</a>
+        <p>بزودی فعالیت سایتمون شروع میشه، فعالیت‌مون در زمینهٔ افزایش ساعت مطالعه با راهکارای تجربی و عملی!!</p>
+        <a href="https://ypt.app" class="cta-button">عضویت در اپلیکشن YPT</a>
     </main>
     <footer>
-        <p>© 2025 روبوستا کلاب</p>
+        <p>© 2025 روبوسنا کلاب</p>
     </footer>
 </body>
 </html>
