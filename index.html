@@ -4,111 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>روبوستا کلاب</title>
-    <style>
-        @font-face {
-            font-family: 'YekanBakh';
-            src: url('fonts/YekanBakh-Regular.ttf') format('truetype');
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'YekanBakh', sans-serif;
-            background-color: #d5c4a1;
-            color: #5d4037;
-            direction: rtl;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header {
-            background-color: #3e2723;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            font-size: 1rem;
-            position: sticky;
-            top: 0;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 0.5rem;
-            height: 3.5rem;
-        }
-
-        header img {
-            width: 40px; /* عرض لوگو به اندازه تگ */
-            height: auto; /* ارتفاع لوگو وابسته به تصویر */
-            filter: invert(1); /* تبدیل رنگ‌ها به معکوس (سفید کردن لوگوی سیاه) */
-        }
-
-        .container {
-            flex-grow: 1;
-            padding: 1rem;
-            display: flex;
-            flex-direction: column; /* چیدمان عمودی برای زیرهم قرارگیری باکس و دکمه‌ها */
-            align-items: center;
-        }
-
-        .box {
-            background-color: #f0ebe5;
-            border: none;
-            border-radius: 15px; /* گوشه‌های گردتر */
-            padding: 1.5rem;
-            width: 80%; /* عرض باکس ثابت */
-            max-width: 400px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-			 text-align: justify;
-            height: auto; /* ارتفاع داینامیک */
-        }
-
-        .button {
-            display: inline-block;
-            background-color: #6d4c41;
-            color: #fff;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 25px; /* گوشه‌های کاملاً گرد */
-            margin-top: 1rem;
-            width: 80%; /* هماهنگی عرض دکمه با عرض باکس */
-            max-width: 400px; /* محدودیت حداکثر عرض دکمه */
-        }
-
-        .button:hover {
-            background-color: #5d4037;
-        }
-
-        footer {
-            background-color: #3e2723;
-            color: #fff;
-            padding: 0.01rem 0;
-            font-size: 0.9rem;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <img src="pics/logo.png" style="cursor: pointer;" onclick="window.location.href=window.location.origin;">
-		<h1 style="margin: 0; padding-left: 0.5rem; cursor: pointer;" onclick="window.location.href=window.location.origin;">روبوستا کلاب</h1>
+        <h1 style="margin: 0; padding-left: 0.5rem; cursor: pointer;" onclick="window.location.href=window.location.origin;">روبوستا کلاب</h1>
     </header>
     <div class="container">
         <div class="box">
             <p>بزودی فعالیت سایتمون شروع میشه، قراره اینجا راجب افزایش ساعت مطالعه با روش‌های تجربی حرف بزنیم، راستی یادتون نره توی گروه روبوستا کلاب داخل اپلیکیشن YPT عضو بشید.</p>
         </div>
         <a href="https://link.yeolpumta.com/P3R5cGU9Z3JvdXBJbnZpdGUmaWQ9NDg0NjQ2Mw==" class="button">عضویت در اپلیکیشن YPT</a>
+        <a href="#" id="openPopup" class="button">قوانین کلاب</a>
         <a href="https://amuleo.ir" class="button">بیوگرافی ادمین کلاب</a>
     </div>
     <footer>
         <p>
-		تمامی حقوق برای
-		<span style="color: #ffd700; font-weight: bold; cursor: pointer;" onclick="window.location.href=window.location.origin;">
-		روبوستا کلاب
+        تمامی حقوق برای
+        <span style="color: #ffd700; font-weight: bold; cursor: pointer;" onclick="window.location.href=window.location.origin;">
+        روبوستا کلاب
         </span>
-		محفوظ است
-		</p>
+        محفوظ است
+        </p>
     </footer>
+
+    <!-- پاپ آپ -->
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <img src="pics/rules.jpg" alt="قوانین کلاب">
+        <button id="closePopup">بستن</button>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
