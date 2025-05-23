@@ -3,12 +3,16 @@
     src: url('fonts/YekanBakh-Regular.ttf') format('truetype');
 }
 
+p {
+  text-align: justify;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'YekanBakh', sans-serif;
-    background-color: #d5c4a1;
-    color: #5d4037;
+    background-color: #ffffff;
+    color: #000009;
     direction: rtl;
     text-align: center;
     display: flex;
